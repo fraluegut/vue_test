@@ -15,23 +15,16 @@ new Vue({
         
     },
     methods: {
-        sumar(){
-            this.total += this.valor
-        },
-        restar(){
-            this.total -= this.valor
-        },
-        mostrarUbicacion(e, mensaje){
-            console.log(e)
-            console.log(mensaje)
-            console.log("-------")
-            /*
-            this.coordenadas.x = e.clientX
-            this.coordenadas.y = e.clientY
-            */
-        },
+        
         ingresarUsuario(){
-
+            var nuevo = {}
+            nuevo.nombre = this.nuevoUsuario.nombre
+            nuevo.correo = this.nuevoUsuario.correo
+            nuevo.clave = this.nuevoUsuario.clave
+            this.usuarios.push(nuevo)
+            this.nuevoUsuario.nombre = ''
+            this.nuevoUsuario.correo = ''
+            this.nuevoUsuario.clave = ''
         }
 
     }
