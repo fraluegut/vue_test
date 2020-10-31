@@ -6,6 +6,7 @@
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
 <style>
 body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif;}
 body, html {
@@ -13,6 +14,31 @@ body, html {
   color: #777;
   line-height: 1.8;
 }
+
+/* Consula de Cookies */
+#cajacookies {
+  box-shadow: 0px 0px 5px 5px #808080;
+  background-color: white;
+  color: black;
+  padding: 10px;
+  margin-left: -15px;
+  margin-right: -15px;
+  margin-bottom: 0px;
+  position: fixed;
+  top: 0px;
+  width: 100%;
+}
+
+#cajacookies button {
+  color: black;
+}
+
+<div id="cajacookies">
+<p><button onclick="aceptarCookies()" class="pull-right"><i class="fa fa-times"></i> Aceptar y cerrar éste mensaje</button>
+Éste sitio web usa cookies, si permanece aquí acepta su uso.
+Puede leer más sobre el uso de cookies en nuestra <a href="politica.html">política de privacidad</a>.
+</p>
+</div>
 
 /* Create a Parallax Effect */
 .bgimg-1, .bgimg-2, .bgimg-3 {
@@ -250,6 +276,7 @@ body, html {
 
   </div>
   <p>Powered by Javier Luengo</p>
+  <p><?php echo "Pruebas en PHP" ?></p>
   <p>
   <?php
         function contador()
