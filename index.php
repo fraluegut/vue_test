@@ -292,7 +292,10 @@ Puede leer más sobre el uso de cookies en nuestra <a href="politica.html">polí
           }
 
           $f = fopen($archivo, "w+");
-          fclose($f);
+          if($f)
+          {
+            fwrite($f, $contador);
+            fclose($f);
           }
 
         return $contador;
